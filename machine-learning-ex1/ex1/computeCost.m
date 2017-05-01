@@ -5,9 +5,10 @@ function J = computeCost(X, y, theta)
 
 % Initialize some useful values
 m = length(y); % number of training examples
-
+assert(m==length(X))
 % You need to return the following variables correctly 
-J = 0;
+z=(X*theta - y).^2;
+J = 1/2 * mean(z);
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
